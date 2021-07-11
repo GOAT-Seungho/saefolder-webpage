@@ -1,4 +1,5 @@
 {
+  "homepage": "https://goat-seungho.github.io/saefolder-webpage",
   "name": "saefolder-webpage",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "2.29.0",
     "immutable": "^3.8.2",
     "include-media": "^1.4.9",
@@ -55,7 +57,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
